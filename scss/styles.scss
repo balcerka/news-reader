@@ -1,0 +1,121 @@
+@import "variables";
+
+html, body {
+    font-family: $basic-font;
+    font-weight: 300;
+    color: $dark-color;
+    background-color: $basic-color;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+/* HEADER */
+
+.header {
+    background: url('../images/background.jpg') center 28% no-repeat;
+    background-size: cover;
+    height: 380px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .claim {
+        max-width: 90rem;
+        color: $basic-color;
+        font-family: $headers-font;
+
+        h1 {
+            font-size: 6rem;
+            margin-top: 15%;
+        }
+
+        .choose-topic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            form {
+                font-size: 2.5rem;
+            }
+
+            .btn {
+                font-family: $headers-font;
+                font-size: 2rem;
+                border-radius: 5px;
+                background-color: orange;
+                color: $basic-color;
+                border: none;
+                padding: 1rem 2.5rem;
+            }
+
+            .btn:focus {
+                outline: none;
+            }
+
+            select {
+                font-family: $headers-font;
+                font-size: 2rem;
+                background-color: $basic-color;
+                height: 4.7rem;
+                border: none;
+                border-radius: 0;
+                outline: none;
+                color: $dark-color;
+            }
+        }
+    }
+}
+
+/* ARTICLES */
+
+.news {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+
+    .article {
+        position: absolute;
+        background-color: #f5e9dc;
+        margin-top: 2%;
+        padding: 10px;
+
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+        }
+
+        h3 {
+            font-family: $headers-font;
+            font-size: 2.8rem;
+            border-bottom: solid 1px $dark-color;
+            padding-bottom: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $dark-color;
+        }
+
+        a:hover {
+            color: $lighter-color;
+        }
+
+        a:focus {
+            outline: none;
+        }
+
+    }
+}
+
+.modal img {
+    width: 100%;
+}
+
+
+
+

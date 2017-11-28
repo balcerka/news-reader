@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Balcerka's news reader</title>
+    <meta name="description" content="The best news reader ever, coded by Balcerka">
+    <meta name="author" content="b.">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600|Poiret+One"
+          rel="stylesheet">
+    <!--Google fonts end-->
+
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
+</head>
+
+<body>
+
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <img src="[image]" alt="">
+                <h3><a href="[#]">[title]</a></h3>
+                <p>[article]</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.async = true;
+        js.src = 'https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.11';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="header">
+        <div class="claim">
+            <h1>Welcome to Balcerka's news reader</h1>
+
+            <div class="choose-topic">
+                <form class="form-inline">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Choose your favourite news source</label>
+                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="inlineFormCustomSelect">
+                        <option selected>Choose...</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div><!--end choose-topic-->
+        </div><!--end claim-->
+    </div><!--end header-->
+
+
+    <div class="container">
+        <div class="news"></div>
+    </div> <!--end container-->
+
+    <script id="article-template" type="text/x-custom-template">
+        <div class="article">
+            <img src="[image]" alt="">
+            <h3><a href="[#]" data-toggle="modal" data-target=".bs-example-modal-lg">[title]</a></h3>
+            <p>[article]</p>
+            <div class="fb-like" data-href="[URLtoLike]" data-layout="button"
+                 data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+        </div>
+
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="js/pinterest_grid.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
+
